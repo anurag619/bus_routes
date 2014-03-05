@@ -37,15 +37,7 @@ def sorted():
 		binary = data.content
 		output = json.loads(binary)
 		
-		num = []
-
-		for j in output['number']:
-			
-			num.append(j)
-
-		num = list(set(num))
-			
-		return render_template('index.html', num= num)
+		return str(output)
 
 @app.route('/edit', methods=('GET' ,'POST') )
 def edit():

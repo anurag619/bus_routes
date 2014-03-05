@@ -18,6 +18,8 @@
         
         <script src="{{ url_for('static', filename='jquery-ui.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+        
         <!-- Bootstrap core CSS -->
         
         <link href="{{ url_for('static', filename='navbar.css') }}"   rel="stylesheet">
@@ -26,49 +28,11 @@
         <style type="text/css">
             
 
-            .ui-widget {
-                font-family: inherit;
-                font-size: 14px;
-            }
-            #myform{
-              padding-left: 0px;
-            }   
-           .custom-combobox {
-              position: relative;
-              display: inline-block;
-            }
-            .custom-combobox-toggle {
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              margin-left: -1px;
-              padding: 0;
-              /* support: IE7 */
-              *height: 1.7em;
-              *top: 0.1em;
-            }
-            .custom-combobox-input {
-              margin: 0;
-              padding: 0.3em;
-            }
-
-            .table > thead > tr > th,
-            .table > tbody > tr > th, 
-            .table > tfoot > tr > th, 
-            .table > thead > tr > td, 
-            .table > tbody > tr > td, 
-            .table > tfoot > tr > td {
-                  border-top: 0;
-                  line-height: 1.42857;
-                  padding: 8px;
-                  vertical-align: top;
-              }
-           .custom-btn{
-              width:100%;
-           }
+            
         </style>
         
         <script type="text/javascript">
+
 
 
         $(document).ready(function(){
@@ -86,12 +50,14 @@
           
         })
           
+        
 
             $("#btn").click(function(){
                       $.ajax({
                           type: "POST",
                           url: "/input",
                           data: $("#myform").serialize(),
+
                           success:function(msg){
                               $("#data").html(msg)
                           }
@@ -123,9 +89,9 @@
 
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
-                <li><a href="/home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/edit">Edit Routes</a></li>
-                <li><a href="/rules">Instructions</a></li>
+                <li><a href="/rules"></a></li>
                 
               </ul>
               
@@ -140,12 +106,8 @@
                        {% block content %} {% endblock %}
                   </div>
                 </div>
-                <div class="row">
-                  <button id="btn" >submit</button>     
-                </div>
-                <div class="row">
-                  <div id="data"></div>      
-                </div>
+                
+                
             </div>
       </div> <!-- /container -->
 

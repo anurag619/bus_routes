@@ -66,7 +66,46 @@ audio:not([controls]) {
 }
 
 
+.ui-widget {
+                font-family: inherit;
+                font-size: 14px;
+            }
+            #myform{
+              padding-left: 0px;
+            }   
+           .custom-combobox {
+              position: relative;
+              display: inline-block;
+            }
+            .custom-combobox-toggle {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin-left: -1px;
+              padding: 0;
+              /* support: IE7 */
+              *height: 1.7em;
+              *top: 0.1em;
+            }
+            .custom-combobox-input {
+              margin: 0;
+              padding: 0.3em;
+            }
 
+            .table > thead > tr > th,
+            .table > tbody > tr > th, 
+            .table > tfoot > tr > th, 
+            .table > thead > tr > td, 
+            .table > tbody > tr > td, 
+            .table > tfoot > tr > td {
+                  border-top: 0;
+                  line-height: 1.42857;
+                  padding: 8px;
+                  vertical-align: top;
+              }
+           .custom-btn{
+              width:100%;
+           }
 
 
 
