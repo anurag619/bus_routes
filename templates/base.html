@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+  		
+  		<title>
+  			kolkata bus routes
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+        
+        <script src="{{ url_for('static', filename='jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js') }}"></script>
+        <!-- Bootstrap core CSS -->
+        
+        <link href="{{ url_for('static', filename='navbar.css') }}"   rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui.css') }}">
+        <link  href="{{ url_for('static', filename='bootstrap.css') }}"  rel="stylesheet">
+        <style type="text/css">
+            
+
+            .ui-widget {
+                font-family: inherit;
+                font-size: 14px;
+            }
+            #myform{
+              padding-left: 0px;
+            }   
+           .custom-combobox {
+              position: relative;
+              display: inline-block;
+            }
+            .custom-combobox-toggle {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin-left: -1px;
+              padding: 0;
+              /* support: IE7 */
+              *height: 1.7em;
+              *top: 0.1em;
+            }
+            .custom-combobox-input {
+              margin: 0;
+              padding: 0.3em;
+            }
+
+            .table > thead > tr > th,
+            .table > tbody > tr > th, 
+            .table > tfoot > tr > th, 
+            .table > thead > tr > td, 
+            .table > tbody > tr > td, 
+            .table > tfoot > tr > td {
+                  border-top: 0;
+                  line-height: 1.42857;
+                  padding: 8px;
+                  vertical-align: top;
+              }
+           .custom-btn{
+              width:100%;
+           }
+        </style>
+        
+        <script type="text/javascript">
+
+
+        $(document).ready(function(){
+
+          $(function(){
+            $('input:checkbox').prop('checked', false)
+            $('input:checkbox').click(function(){
+                if($(this).is(':checked')){
+                    $('input:checkbox').not(this).prop('checked', false);        
+                }
+            });
+
+          $( "#from" ).combobox();
+          $( "#to" ).combobox();
+          
+        })
+          
+
+            $("#btn").click(function(){
+                      $.ajax({
+                          type: "POST",
+                          url: "/input",
+                          data: $("#myform").serialize(),
+                          success:function(msg){
+                              $("#data").html(msg)
+                          }
+                          })
+            });    
+        });
+                                       
+   </script>
+
+    </head>
+    
+    <body>
+    	
+
+
+      <div class="container text-center">
+
+          <!-- Static navbar -->
+          <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" >Kolkata Bus routes</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/edit">Edit Routes</a></li>
+                <li><a href="/rules">Instructions</a></li>
+                
+              </ul>
+              
+            </div><!--/.nav-collapse -->
+          </div>
+      
+      <!-- Main component for a primary marketing message or call to action -->
+
+            <div class="jumbotron">
+                <div class="row">
+                  <div style="" class="col-md-offset-4 col-md-4 main_content">
+                       {% block content %} {% endblock %}
+                  </div>
+                </div>
+                <div class="row">
+                  <button id="btn" >submit</button>     
+                </div>
+                <div class="row">
+                  <div id="data"></div>      
+                </div>
+            </div>
+      </div> <!-- /container -->
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <!--script type="text/javascript" src="{{ url_for('static', filename='dropdown.js') }}"></script-->
+    
+    </body>
+
+</html>

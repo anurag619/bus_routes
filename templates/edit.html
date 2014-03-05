@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4 id = "edit-header"> Edit Routes </h4>
+
+<div id = "status">
+
+	{% if status == '200' %}
+		<p>your entry was posted successfully Thanks for your contribution.</p>
+
+	{% endif %}
+</div>
+
+
+<form  action="/edit" method="POST" id='myform'>
+
+		  <div class="form-group">
+
+		    <input type = "text" class="form-control"  placeholder="Start.  (Ex: Howrah Station)" name="starts">
+		  </div>
+
+		  <div class="form-group">
+
+		    <input  class="form-control" placeholder="End. (Ex: Park Street) " name="end">
+		  </div>
+
+		  <div class="form-group">
+
+		    <input class="form-control"  placeholder="Bus number. (Ex: 24A,3C/1)" name="number">
+		  </div>
+
+		  <div class="form-group">
+
+		    <input class="form-control"  placeholder="bus type. (Ex: Private, Mini or Govern)" name="type">
+		  </div>
+
+		  <div class="form-group">
+
+		    <textarea class="form-control" rows="3" placeholder="via. (mention the stops the bus passes through)" name="via"></textarea>
+
+		  </div>
+
+
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox" name="check" value="new"> New entry
+		    </label>
+		  </div>
+
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox" name="check" value="edit"> Edit entry
+		    </label>
+		  </div>
+
+
+		  <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+
+{% block content %}
+
+
+<div id = "myform"> <p> <u>bus number</u>: 
+	{% for i in num %}
+
+		{{i}},
+
+	{% endfor %}
+
+	
+	</p>
+
+	<p><u>via</u>: {{stop}} </p>
+
+</div>
+
+{% endblock %}
