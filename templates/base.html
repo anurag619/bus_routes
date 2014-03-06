@@ -22,7 +22,7 @@
         
         <!-- Bootstrap core CSS -->
         
-        <link href="{{ url_for('static', filename='navbar.css') }}"   rel="stylesheet">
+       
         <link rel="stylesheet" href="{{ url_for('static', filename='jquery-ui.css') }}">
         <link  href="{{ url_for('static', filename='bootstrap.css') }}"  rel="stylesheet">
         <style type="text/css">
@@ -50,7 +50,6 @@
           
         })
           
-        
 
             $("#btn").click(function(){
                       $.ajax({
@@ -59,7 +58,11 @@
                           data: $("#myform").serialize(),
 
                           success:function(msg){
-                              $("#data").html(msg)
+                              $("#data").html(msg).dialog({modal:true, buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        }}).dialog('open');
                           }
                           })
             });    
