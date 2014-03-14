@@ -33,11 +33,14 @@ def sorted():
 
 		url = 'http://routes1.herokuapp.com/%s/%s' %(start,end)
 		data = requests.get(url)
-		
 		binary = data.content
-		output = json.loads(binary)
+		binar = (set(binary))
+
 		
-		return str(output)
+		#output = json.loads(binary)
+		
+
+		return str(binary) 
 
 @app.route('/edit', methods=('GET' ,'POST') )
 def edit():
