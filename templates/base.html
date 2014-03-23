@@ -40,28 +40,20 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
                 <li><a href="/">Home</a></li>
-                <li><a href="/edit">Edit</a></li>
-                <li><a href="#myModal" data-toggle="modal"></a></li>
+                <li><a href="/edit"></a></li>
                 
-               
               </ul>
               
             </div><!--/.nav-collapse -->
           </div>
       
       <!-- Main component for a primary marketing message or call to action -->
+      <div class = "main content">
+            {% block home %} {% endblock %}
 
-            <div class="jumbotron">
-                <div class="row">
-                  <div class="col-md-offset-4 col-md-4 main_content">
-
-                    {% block content %} {% endblock %}
-                      
-                  </div>
-                </div>
-                
-
-            </div>
+            {% block content %} {% endblock %}
+            
+      </div>
 
 
         

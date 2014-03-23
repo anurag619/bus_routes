@@ -117,7 +117,139 @@ display:block;
   
 }
 
+.span4{
+  padding: 2px 20px 2px 20px;
+}
 
+/*------------------------------------home-page css------------------------ */
+
+
+
+
+/* Use a wide full screen for small screens like tablets. */
+@media (min-width: 768px) and (max-width:992px) {
+    .container {
+    width: initial;
+        padding-left: 2em;
+        padding-right: 2em;        
+  }
+}
+
+/* --- Plans ---------------------------- */
+
+.home{
+  width: 950px;
+  height: 100%;
+  padding: 2px 20px 2px 20px;
+
+}
+
+.my_planHeader {
+    text-align: center;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    color: rgb(94, 94, 94);
+    padding-top:0.2em;
+    padding-bottom:0.2em;
+}
+.my_planTitle {
+    font-size:2em;
+    font-weight: bold;
+}
+.my_planPrice {
+    font-size:1.4em;
+    font-weight: bold;    
+}
+.my_planDuration {
+    margin-top: -0.6em;
+}
+
+@media (max-width: 768px) {
+    .my_planTitle {
+        font-size:small;
+    }    
+}
+
+/* --- Features ------------------------- */
+
+.my_feature {
+    line-height:2.8em;   
+}
+
+@media (max-width: 768px) {
+    .my_feature {
+        text-align: center
+    }
+ }
+
+.my_featureRow {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    border: 0.1em solid rgb(163, 163, 163);
+}    
+
+/* --- Plan 1 --------------------------- */
+.my_plan1 {
+    background: rgb(200, 231, 231);
+}
+
+.my_planHeader.my_plan1 {
+    background: #F3F3F3;;
+    margin-right: 3px ; 
+}
+
+
+.about-image :hover{
+    background-color: rgb(110, 210, 174);
+    transform: translateY(-12px);
+
+}
+
+/* --- Plan 2 --------------------------- */
+.my_plan2 {
+    background: rgb(231, 231, 231);
+}
+
+
+.my_planHeader.my_plan2 {
+    background: rgb(150, 231, 231);
+    margin-right: 3px ; 
+    
+}
+
+.about-image :hover{
+    background-color: rgb(110, 210, 174);
+    transform: translateY(-12px);
+
+}
+
+/* --- Plan 3 --------------------------- */
+.my_plan3 {
+    background: rgb(231, 231, 231);
+}
+
+.my_planHeader.my_plan3 {
+    background: rgb(200, 231, 231);
+    margin-right: 3px ; 
+}
+
+.about-image :hover{
+    background-color: rgb(110, 210, 174);
+    transform: translateY(-12px);
+
+}
+
+.my_planFeature {
+    text-align: center;
+    font-size: 2em;
+}
+
+.my_planFeature i.my_check {
+    color: green;
+}
+
+
+
+/* ------------------home-page css ends ----------------- */
 
 
 /*-------------- custom ends--------------------------------------------------------------------*/
@@ -926,6 +1058,7 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  padding: 5px 20px 5px 20px
 }
 
 .row:before,
@@ -1000,6 +1133,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 13px;
 }
 
 .col-xs-1,
@@ -1050,7 +1184,8 @@ pre code {
 }
 
 .col-xs-4 {
-  width: 33.33333333333333%;
+  width: 31.83333333333333%;
+  height: 300px;
 }
 
 .col-xs-3 {

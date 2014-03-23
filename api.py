@@ -10,6 +10,17 @@ app.secret_key= '\xbf\xb50\x94au\x8f\xf9\se2\x1f\x93\x06(\xdf\xe4\xaf\x1f\x86k\x
 @app.route('/')
 def home():
 
+	return render_template('home.html')
+
+
+@app.route('/about')
+def about():
+
+	return render_template('about.html')
+
+@app.route('/search')
+def search():
+
 	data = requests.get('http://routes1.herokuapp.com/')
 
 	binary = data.content
@@ -22,7 +33,7 @@ def home():
 		from_list.append(i)
 
 
-	return render_template('home.html', from_data = from_list )
+	return render_template('options.html', from_data = from_list )
 
 
 @app.route('/input', methods=('GET' ,'POST') )
