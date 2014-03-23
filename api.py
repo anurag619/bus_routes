@@ -22,7 +22,7 @@ def home():
 		from_list.append(i)
 
 
-	return render_template('home.html', from_data = from_list )
+	return render_template('base.html', from_data = from_list )
 
 
 @app.route('/input', methods=('GET' ,'POST') )
@@ -33,14 +33,12 @@ def sorted():
 
 		url = 'http://routes1.herokuapp.com/%s/%s' %(start,end)
 		data = requests.get(url)
-		binary = data.content
-		binar = (set(binary))
+		binary = data.text
+		binary = eval(binary)
+		num = binary['number']
 
-		
-		#output = json.loads(binary)
-		
 
-		return str(binary) 
+	return render_template('index.html', result=num)
 
 @app.route('/edit', methods=('GET' ,'POST') )
 def edit():

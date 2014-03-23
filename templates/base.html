@@ -40,26 +40,10 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
                 <li><a href="/">Home</a></li>
-                <li><a href="/edit"></a></li>
-                <!--li><a href="#myModal" data-toggle="modal">Instructions</a></li-->
+                <li><a href="/edit">Edit</a></li>
+                <li><a href="#myModal" data-toggle="modal"></a></li>
                 
-               <div class="modal styled hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+               
               </ul>
               
             </div><!--/.nav-collapse -->
@@ -69,18 +53,43 @@
 
             <div class="jumbotron">
                 <div class="row">
-                  <div style="" class="col-md-offset-4 col-md-4 main_content">
-                       {% block content %} {% endblock %}
+                  <div class="col-md-offset-4 col-md-4 main_content">
+                      
+                      <form class="form-horizontal" id='myform' action="/input" method="post">
+
+                          <div class="form-group">
+                            <label for="from" class="col-sm-2 control-label">From</label>
+                            <div class="col-sm-10">
+                              <select id = "from" name="from" class="form-control">
+                                  {% if from_data %}
+                                    {% for i in from_data %}
+                                      <option value="{{i}}">{{i}}</option>  
+                                      {% endfor %}
+                                    {% endif %}
+                                </select> 
+
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="to" class="col-sm-2 control-label">To</label>
+                            <div class="col-sm-10">
+                              <select name="to"  id="to" class="form-control">
+                                    {% if from_data %}
+                                      {% for j in from_data %}
+                                        <option value="{{j}}">{{j}}</option>  
+                                      {% endfor %}
+                                    {% endif %}
+                              </select> 
+                            </div>
+                          </div>
+                            <input type="submit" value="submit" />
+                      </form>
                   </div>
                 </div>
                 
-                <div class="row">
-                  <button id="btn" >submit</button>     
-                </div>
+                
 
-                <div class="row">
-                  <div id="data"></div>      
-                </div>
+                
 
             </div>
 
@@ -90,10 +99,10 @@
 
     <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
         
-        <script src="{{ url_for('static', filename='jquery-ui.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    
     <script type="text/javascript">
 
 
@@ -115,19 +124,7 @@
          
        
 
-            $("#btn").click(function(){
-                      $.ajax({
-                          type: "POST",
-                          url: "/input",
-                          data: $("#myform").serialize(),
-
-                          success:function(msg){
-                              $("#data").html(msg).dialog({modal:true, buttons: {
-                            
-                        }}).dialog('open');
-                          }
-                          })
-            });    
+            
         });
                                        
    </script>
