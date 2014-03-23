@@ -22,7 +22,7 @@ def home():
 		from_list.append(i)
 
 
-	return render_template('base.html', from_data = from_list )
+	return render_template('home.html', from_data = from_list )
 
 
 @app.route('/input', methods=('GET' ,'POST') )
