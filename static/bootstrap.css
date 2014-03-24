@@ -139,17 +139,6 @@ display:block;
 
 /* --- Plans ---------------------------- */
 
-.home{
-  width: 1134px;
-
-}
-
-.home-ele{
-  width: 1000px;
-  position: absolute;
-  left: 14%;
-  padding-left: 8%;
-}
 
 .my_planHeader {
     text-align: center;
@@ -1120,11 +1109,7 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
-  padding: 0px 20px 0px 20px;
-  
-  float: center;
+  padding-left: 9%;
 }
 
 .row:before,
