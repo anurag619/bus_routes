@@ -141,16 +141,14 @@ display:block;
 
 .home{
   width: 1134px;
-  height: 100%;
-  padding: 2px 20px 2px 20px;
 
 }
 
 .home-ele{
   width: 1000px;
   position: absolute;
-  margin: 0px 0 0 -50px;
   left: 14%;
+  padding-left: 8%;
 }
 
 .my_planHeader {
