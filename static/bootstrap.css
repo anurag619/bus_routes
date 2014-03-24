@@ -118,6 +118,8 @@ display:block;
 }
 
 .span4{
+  padding-left: 5%;
+  
   
 }
 
@@ -142,6 +144,10 @@ display:block;
   height: 100%;
   padding: 2px 20px 2px 20px;
 
+}
+
+.home-ele{
+  width: 1000px;
 }
 
 .my_planHeader {
