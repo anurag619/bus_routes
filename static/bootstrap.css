@@ -117,11 +117,6 @@ display:block;
   
 }
 
-.span4{
-  padding-left: 5%;
-  
-  
-}
 
 /*------------------------------------home-page css------------------------ */
 
@@ -144,7 +139,7 @@ display:block;
     text-align: center;
     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
     color: rgb(94, 94, 94);
-    padding-top:0.2em;
+    padding-top:1.0em;
     padding-bottom:0.2em;
 }
 .my_planTitle {
@@ -327,6 +322,7 @@ body {
 
 a {
   background: transparent;
+  display: block;
 }
 
 a:focus {
@@ -1109,7 +1105,7 @@ pre code {
 }
 
 .row {
-  padding-left: 9%;
+  padding-left: 10%;
 }
 
 .row:before,
