@@ -118,7 +118,7 @@ display:block;
 }
 
 .span4{
-  padding: 2px 20px 2px 20px;
+  padding-left: 30px;
 }
 
 /*------------------------------------home-page css------------------------ */
@@ -1058,7 +1058,9 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
-  padding: 5px 20px 5px 20px
+  padding: 0px 20px 0px 20px;
+  
+  float: center;
 }
 
 .row:before,
@@ -1184,7 +1186,7 @@ pre code {
 }
 
 .col-xs-4 {
-  width: 31.83333333333333%;
+  width: 30.83333333333333%;
   height: 300px;
 }
 
