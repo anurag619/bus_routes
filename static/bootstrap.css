@@ -118,12 +118,7 @@ display:block;
 }
 
 .span4{
-  width: 750px;
-  position: absolute;
-    top: 25%;
-    left: 25%;
-    margin-top: -40px;
-    margin-left: -30px;
+  
 }
 
 /*------------------------------------home-page css------------------------ */
