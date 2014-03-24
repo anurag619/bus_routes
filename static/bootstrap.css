@@ -148,6 +148,9 @@ display:block;
 
 .home-ele{
   width: 1000px;
+  position: absolute;
+  margin: 0px 0 0 -67px;
+  left: 67%;
 }
 
 .my_planHeader {
