@@ -1197,7 +1197,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  padding-top: 13px;
+  
 }
 
 .col-xs-1,
@@ -1442,7 +1442,7 @@ pre code {
     width: 91.66666666666666%;
   }
   .col-sm-10 {
-    width: 83.33333333333334%;
+    width: 70.33333333333334%;
   }
   .col-sm-9 {
     width: 75%;
@@ -1466,7 +1466,7 @@ pre code {
     width: 25%;
   }
   .col-sm-2 {
-    width: 16.666666666666664%;
+    width: 16.667666666666664%;
   }
   .col-sm-1 {
     width: 8.333333333333332%;
@@ -1630,7 +1630,7 @@ pre code {
     width: 41.66666666666667%;
   }
   .col-md-4 {
-    width: 38.33333333333333%;
+    width: 45.33333333333333%;
   }
   .col-md-3 {
     width: 25%;
@@ -2515,6 +2515,8 @@ textarea.input-lg {
 .form-horizontal .form-group {
   margin-right: -15px;
   margin-left: -15px;
+  width: 350px;
+  padding-top: 5px;
 }
 
 .form-horizontal .form-group:before,
