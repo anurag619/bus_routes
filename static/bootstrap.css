@@ -118,7 +118,12 @@ display:block;
 }
 
 .span4{
-  padding-left: 30px;
+  
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
 }
 
 /*------------------------------------home-page css------------------------ */
@@ -250,6 +255,63 @@ display:block;
 
 
 /* ------------------home-page css ends ----------------- */
+
+/*-----------android market css ----*/
+
+
+
+.big-btn{
+padding: 10px 0px 11px 0px;
+width: 215px;
+margin-top:5px;
+}
+
+.big-btn i{
+font-size: 65px;
+margin-right: 0px !important;
+}
+.big-btn strong{
+font-size: 25px;
+text-shadow: 1px 2px 0px #34659B;
+color: #fff;
+line-height: 24px;
+}
+.big-btn .btn-text{
+margin-top:6px;
+}
+
+.big-btn small{font-size: 75%;}
+
+.android-btn{
+
+width: 240px;
+padding: 13px 17px 13px 0px !important;
+background-color: #000 !important;
+border-color: #000 !important;
+
+}
+.android-btn:hover{
+background-color: #272727;
+}
+
+.android-btn i{
+font-size: 55px;
+}
+
+.android-btn .btn-text{
+margin-top: 0px;
+}
+
+.android-btn strong{
+font-size: 25px;
+text-shadow: none;
+color: #fff;
+line-height: 24px;
+}
+
+
+
+/* -----android css ends -----*/
 
 
 /*-------------- custom ends--------------------------------------------------------------------*/
