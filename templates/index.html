@@ -3,16 +3,35 @@
 {% block content %}
 
 	<div class="jumbotron">
-        <div class="row">
-            <div style="" class="col-md-offset-4 col-md-4 main_content">
+        
+		<p> <a href="/search">Back to search</a></p> <br>
+			<div class="table-responsive">
+				<table class="table">
+			    <tbody>
+			        <tr>
+			            <th>From</th>
+			            <th>To</th>
+			            <th>Routes</th>
+			        </tr>
+			        <tr>
+			        	<td>{{start}}</td>
+			        	<td>{{end}}</td>
+			        	{% if result %}
+				        	<td> {% for i in result %}
 
-				{% for i in result %}
+									<a href="">{{i}} </a>
+								    
+								{% endfor %}
+							</td>
+						{% else %}
+							<td> <strong>No routes found.</strong></td>
+						{% endif %}
 
-					<div class="row"><a href="">{{i}}</a></div>
+			        </tr>
+            </div>	
 
-				{% endfor %}
-			</div>
-		</div>
+				
+			
 	</div>
 
 {% endblock %}

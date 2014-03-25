@@ -49,7 +49,7 @@ def sorted():
 		num = binary['number']
 
 
-	return render_template('index.html', result=num)
+	return render_template('index.html', result=num, start=start,end=end)
 
 @app.route('/edit', methods=('GET' ,'POST') )
 def edit():
